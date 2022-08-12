@@ -1,0 +1,18 @@
+<!-- pantalla con lista hardcode -->
+<a routerLink="/favoritas">atras</a>
+
+<form action="">
+
+    <input type="search" placeholder="buscar"  #searchText>
+</form>
+
+<ul>
+    Lista de criptomonedas (hardcode)
+
+    <li *ngFor="let cripto of listaCriptos">
+        
+        <a routerLink="/cantidad" (click)="crearNuevaCard(cripto)" >{{cripto}}</a>
+        
+    </li>
+
+</ul>

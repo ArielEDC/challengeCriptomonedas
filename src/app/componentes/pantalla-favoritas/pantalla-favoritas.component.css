@@ -1,0 +1,14 @@
+
+.contenedor{
+    display: flex;
+    justify-content: end;
+}
+
+.mas{
+    font-size: 20px;
+    padding: 20px;
+    background-color: whitesmoke;
+    text-decoration: none;
+    border-radius: 100%;
+
+}
