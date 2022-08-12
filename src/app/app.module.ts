@@ -8,6 +8,7 @@ import { PantallaListaComponent } from './componentes/pantalla-lista/pantalla-li
 import { PantallaCantidadComponent } from './componentes/pantalla-cantidad/pantalla-cantidad.component';
 import { PantallaFavoritasComponent } from './componentes/pantalla-favoritas/pantalla-favoritas.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

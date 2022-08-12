@@ -1,5 +1,6 @@
 <p>{{cripto.coin}}</p>
 <p>precio: {{cripto.prices.USD}}</p>
-<p>cantidad: {{this.cantidad}}</p>
+<p>cantidad: {{(this.cantidad)}}</p>
 <p>precio total: {{cripto.prices.USD * this.cantidad}} </p>
-<a (click)="eliminarDeLocalStorage()">borrar</a>
+<a href="/" (click)="eliminarDeLocalStorage(this.i)"
+  >borrar</a>

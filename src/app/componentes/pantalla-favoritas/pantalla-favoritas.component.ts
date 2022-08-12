@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiCriptoService } from 'src/app/servicio/api-cripto.service';
 
 @Component({
   selector: 'app-pantalla-favoritas',
@@ -7,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PantallaFavoritasComponent implements OnInit {
 
-  nombre = "eth";
-  
-  favoritos=[];
-  localStorageKeyName:string = "criptos";
+  // de LocalStorage
 
-  constructor() { }
+  favoritos:any[]=[];
+  
+  
+
+  constructor(private serv:ApiCriptoService) { }
 
   ngOnInit(): void {
     this.cargarLocalStorage();
@@ -20,12 +22,13 @@ export class PantallaFavoritasComponent implements OnInit {
   
   cargarLocalStorage(){
 
-    let datosLocalStorage = localStorage.getItem(this.localStorageKeyName);
+    let datosLocalStorage = localStorage.getItem(this.serv.localStorageKeyName);
     if(datosLocalStorage !== null){
       // convierto a json
       this.favoritos = JSON.parse(datosLocalStorage);
       console.log(this.favoritos);
     }
   }
+
 
 }

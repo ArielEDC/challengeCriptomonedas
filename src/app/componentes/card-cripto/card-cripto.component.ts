@@ -8,37 +8,37 @@ import { ApiCriptoService } from 'src/app/servicio/api-cripto.service';
 })
 export class CardCriptoComponent implements OnInit {
 
-  @Input() nombre:any;
-  @Input() precio:any;
+  @Input() nombre:any; //nombre que se inserta en la api
+
   @Input() cantidad:any;
-  @Input() total:any;
-  
+
+  @Input() i:any;
+
   cripto:any;
-  localStorageKeyName:string = "criptos";
-  //tarjetaCripto:object;
 
   constructor(private api:ApiCriptoService) { }
 
   ngOnInit(): void {
-    this.api.verCripto(this.nombre).subscribe(data=>{
+    this.api.verCripto(this.nombre.toLowerCase()).subscribe(data=>{
       this.cripto = data;
       console.log(this.cripto);
     });
   }
 
 
-
-
   eliminarDeLocalStorage(indice:number){
     let criptos = [];
-    let datosLocalStorage = localStorage.getItem(this.localStorageKeyName);
+    let datosLocalStorage = localStorage.getItem(this.api.localStorageKeyName);
 
     if(datosLocalStorage !== null){
       criptos = JSON.parse(datosLocalStorage);
       criptos.splice(indice,1);
   
-      localStorage.setItem(this.localStorageKeyName, JSON.stringify(criptos));
+      localStorage.setItem(this.api.localStorageKeyName, JSON.stringify(criptos));
+
+
     }
+    
 
   }
 

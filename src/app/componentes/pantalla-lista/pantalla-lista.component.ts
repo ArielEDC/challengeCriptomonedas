@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiCriptoService } from 'src/app/servicio/api-cripto.service';
 
 @Component({
   selector: 'app-pantalla-lista',
@@ -11,18 +12,41 @@ export class PantallaListaComponent implements OnInit {
     simbolo: "",
     cantidad: ""
   }
-  listaCriptos : string[] = ["BTC","ETH","LTC","DAI"];
 
-  constructor() { }
+
+  listaCriptos : string[] = ["BTC","ETH","LTC","TRX", "BCH", "XMR", ];
+  busqueda:string = "";
+  listaFiltrada : string[] = this.listaCriptos;
+  
+  constructor(private serv:ApiCriptoService) { 
+
+  }
 
   ngOnInit(): void {
   }
 
-  crearNuevaCard(cripto:any){
+  agregarNombreACard(cripto:any){
 
-    this.nuevaCripto.simbolo = cripto;
-    console.log(this.nuevaCripto);   
+    this.serv.setNombreCripto(cripto); 
 
   }
+  buscador(){
+
+    //console.log(this.busqueda); //texto escrito
+
+    this.listaFiltrada = [];
+    this.listaCriptos.forEach(cripto=>{
+
+      // si hay coincidencia, guardo en filtrada
+      if(cripto.toLowerCase().includes(this.busqueda.toLowerCase())){
+        this.listaFiltrada.push(cripto);
+      }
+    })
+
+    //console.log(this.listaFiltrada); //lista creada
+  }
+
+   
+
 
 }

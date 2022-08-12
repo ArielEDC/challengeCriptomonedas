@@ -1,8 +1,10 @@
 <a routerLink="/lista">atras</a>
 
-<form action="">
+    <p>{{simbolo.simbolo}}</p>
+    
     <label for="cantidad">cantidad</label>
-    <input type="number">
+    
+    <input type="number" [(ngModel)]="input" name="number" min="0">
 
-    <button type="submit" routerLink="/">Guardar</button>
-</form>
+    <button type="submit" (click)="agregarCantACard(input)" routerLink="/">Guardar</button>
+
