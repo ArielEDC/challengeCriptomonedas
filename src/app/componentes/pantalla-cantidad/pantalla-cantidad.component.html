@@ -1,10 +1,25 @@
-<a routerLink="/lista">atras</a>
+<div class="contenedor">
 
-    <p>{{simbolo.simbolo}}</p>
+    <div class="encabezado">
+        <svg routerLink="/lista" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="60" height="60" viewBox="0 0 24 24" stroke-width="2" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <line x1="5" y1="12" x2="9" y2="16" />
+            <line x1="5" y1="12" x2="9" y2="8" />
+        </svg>
+        
+        <h1>Criptos Favoritas</h1>
+    </div>
+
+    <p class="simbolo">{{simbolo.simbolo}}</p>
+    <p>Precio actual: {{cotizacion}} USD</p>
+
     
-    <label for="cantidad">cantidad</label>
+    <div class="comandos">
+        <input class="cantidad" placeholder="Cantidad de {{simbolo.simbolo}}" type="number" [(ngModel)]="input" name="number" min="0">
+
+        <button class="boton-enviar" type="submit" (click)="agregarCantACard(input)" routerLink="/">Guardar</button>
+    </div>
     
-    <input type="number" [(ngModel)]="input" name="number" min="0">
 
-    <button type="submit" (click)="agregarCantACard(input)" routerLink="/">Guardar</button>
-
+</div>

@@ -1,16 +1,23 @@
 <!--pantalla favoritos-->
+<div class="contenedor">
+    <h1>Criptos Favoritas</h1>
 
-    <app-card-cripto *ngFor="let fav of favoritos; let i = index;"
+    <app-card-cripto 
+        *ngFor="let fav of favoritos; let i = index;"
         [nombre]="this.fav.simbolo"
         [cantidad]="this.fav.cantidad"
         [i]="i">
     </app-card-cripto>
 
 
+    <!--boton + que redireccione a segunda pantalla-->
+    <div class="btn">
+        <svg routerLink="/lista" class="mas" class="icon icon-tabler icon-tabler-circle-plus" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#24b42b" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <circle cx="12" cy="12" r="9" />
+            <line x1="9" y1="12" x2="15" y2="12" />
+            <line x1="12" y1="9" x2="12" y2="15" />
+          </svg>
+    </div>
 
-
-<!--boton + que redireccione a segunda pantalla-->
-
-<div class="contenedor">
-    <a routerLink="/lista" class="mas">+</a>
 </div>

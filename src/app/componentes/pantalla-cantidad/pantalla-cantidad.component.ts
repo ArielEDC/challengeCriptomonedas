@@ -11,11 +11,15 @@ export class PantallaCantidadComponent implements OnInit {
 
   input = "";
   simbolo:any = this.serv.getCripto();
+  cotizacion:any = "";
 
   constructor(private serv:ApiCriptoService) { }
 
   ngOnInit(): void {
-
+    this.serv.verCripto(this.simbolo.simbolo.toLowerCase()).subscribe(data=>{
+      this.cotizacion = Number.parseFloat(data.prices.USD);
+      console.log(this.cotizacion);
+    });
   }
 
   agregarCantACard(cantidad:any){
@@ -40,5 +44,6 @@ export class PantallaCantidadComponent implements OnInit {
 
     localStorage.setItem(this.serv.localStorageKeyName, JSON.stringify(criptos));
   }
+
 
 }

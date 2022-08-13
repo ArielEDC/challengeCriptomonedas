@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.encabezado{
+    display: flex;
+}
+.buscador{
+    margin: 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    width: min(50rem, 100%);
+    font-family: var(--fuente);
+    font-weight: 600;
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 2rem 0;
+    padding: 1rem;
+    list-style: none;
+}
+
+.lista li{
+    width: min(50rem, 100%);
+    background-color: var(--gris);
+    border-radius: 1rem;
+
+    margin: 0.2rem 0;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+
+}
+.lista li:hover{
+    background-color: var(--fondo1);
+}

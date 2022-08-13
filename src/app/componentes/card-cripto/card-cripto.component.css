@@ -1,0 +1,30 @@
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 1rem;
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color:var(--gris);
+}
+.card:hover{
+    color: var(--blanco);
+}
+
+.card>p{
+    width: 20%;
+}
+.card>div{
+    width: 65%;
+}
+
+span{
+    font-weight: 600;
+}
+a{
+    display: flex;
+}
+.menos{
+    align-items: center;
+}

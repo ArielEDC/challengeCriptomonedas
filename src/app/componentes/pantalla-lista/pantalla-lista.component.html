@@ -1,17 +1,27 @@
 <!-- pantalla con lista hardcode -->
-<a routerLink="/favoritas">atras</a>
+<div class="contenedor">
 
-
-
-    <input placeholder="buscar" type="text" [(ngModel)]="busqueda" (input)="buscador()">
-
-
-<ul>
-    Lista de criptomonedas (hardcode)
-
-    <li *ngFor="let cripto of listaFiltrada">
+    <div class="encabezado">
+        <svg routerLink="/favoritas" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="60" height="60" viewBox="0 0 24 24" stroke-width="2" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <line x1="5" y1="12" x2="9" y2="16" />
+            <line x1="5" y1="12" x2="9" y2="8" />
+        </svg>
         
-        <a routerLink="/cantidad" (click)="agregarNombreACard(cripto)" >{{cripto}}</a>
+        <h1>Criptos Favoritas</h1>
+    </div>
+    
+    
+    <ul class="lista">
+        <input class="buscador" placeholder="Buscar" type="text" [(ngModel)]="busqueda" (input)="buscador()">
         
-    </li>
-</ul>
+        <p>Lista de criptomonedas</p>
+        
+        <li routerLink="/cantidad" (click)="agregarNombreACard(cripto)" *ngFor="let cripto of listaFiltrada">
+            
+            {{cripto}}
+            
+        </li>
+    </ul>
+</div>

@@ -1,14 +1,17 @@
+h1{
+    text-align: center;
+}
 
 .contenedor{
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    max-width: 80rem;
 }
 
-.mas{
-    font-size: 20px;
-    padding: 20px;
-    background-color: whitesmoke;
-    text-decoration: none;
-    border-radius: 100%;
-
+.btn{
+    display: flex;
+    justify-content: flex-end;
 }
+

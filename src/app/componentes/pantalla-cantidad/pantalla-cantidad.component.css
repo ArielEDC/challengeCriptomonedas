@@ -1,0 +1,45 @@
+h1{
+    text-align: center;
+    margin: 0 auto;
+}
+.encabezado{
+    display: flex;
+
+}
+
+.simbolo{
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem;
+}
+
+.comandos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cantidad{
+    width: min(50rem, 100%);
+    margin: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    font-family: var(--fuente);
+    font-weight: 600;
+}
+
+.boton-enviar{
+    width: min(50rem, 100%);
+    margin: 1rem ;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    max-width: 60rem;
+    
+    background-color: var(--gris);
+    color: var(--gris-claro);
+    font-family: var(--fuente);
+    cursor: pointer;
+    font-weight: 600;
+}

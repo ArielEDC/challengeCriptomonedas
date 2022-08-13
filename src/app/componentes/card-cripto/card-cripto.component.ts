@@ -15,13 +15,15 @@ export class CardCriptoComponent implements OnInit {
   @Input() i:any;
 
   cripto:any;
+  precio:any;
 
   constructor(private api:ApiCriptoService) { }
 
   ngOnInit(): void {
     this.api.verCripto(this.nombre.toLowerCase()).subscribe(data=>{
       this.cripto = data;
-      console.log(this.cripto);
+      this.precio = Number.parseFloat(data.prices.USD);
+      //console.log(this.cripto);
     });
   }
 

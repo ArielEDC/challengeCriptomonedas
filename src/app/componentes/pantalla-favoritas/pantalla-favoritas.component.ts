@@ -26,7 +26,7 @@ export class PantallaFavoritasComponent implements OnInit {
     if(datosLocalStorage !== null){
       // convierto a json
       this.favoritos = JSON.parse(datosLocalStorage);
-      console.log(this.favoritos);
+      //console.log(this.favoritos);
     }
   }
 
