@@ -16,7 +16,7 @@
 
     
     <div class="comandos">
-        <input class="cantidad" placeholder="Cantidad de {{simbolo.simbolo}}" type="number" [(ngModel)]="input" name="number" min="0">
+        <input autofocus class="cantidad" placeholder="Cantidad de {{simbolo.simbolo}}" type="number" [(ngModel)]="input" name="number" min="0" >
 
         <button class="boton-enviar" type="submit" (click)="agregarCantACard(input)" routerLink="/">Guardar</button>
     </div>

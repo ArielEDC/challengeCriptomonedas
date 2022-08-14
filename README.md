@@ -1,27 +1,25 @@
 # CryptoApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+Aplicación desarrollada con Angular, challenge de 42i.
 
-## Development server
+## Descripcion de la App
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+La misma permite guardar una lista de criptomonedas favoritas.
+Cada elemento de la lista contendrá la cotizacion de una criptomoneda, una cantidad definida por el usuario, y el valor total para dicha cantidad.
+La cotización de cada criptomoneda se obtiene mediante el consumo de una [API](https://docs.cryptapi.io/).
+La lista se almacena automaticamente en el navegador (LocalStorage) y se puede eliminar cada elemento cuando se desee.
+La app permite agregar un nuevo elemento, mediante una busqueda dinamica en una lista (hardcode), y definirle una cantidad.
 
-## Code scaffolding
+## Instrucciones de uso
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Hacer click en el botón + (signo más) para acceder a la lista de criptomonedas disponibles.
+2. Hacer click en la criptomoneda deseada. 
+De forma opcional, escribir la criptomoneda en la barra de búsqueda, para filtrarla. 
+3. Ingresar la cantidad correspondiente y dar click en el botón Guardar. 
+4. Repetir tantas veces como el usario considere. 
+5. Para eliminar una criptomonda favorita, hacer click en el botón - (signo menos).
+6. Para retroceder en el proceso (tanto en el paso 2 como 3), hacer click en la flecha.
 
-## Build
+## Acceder a la App
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[https://cripto-favoritas.web.app/](https://cripto-favoritas.web.app/)
