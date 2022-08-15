@@ -31,3 +31,20 @@ a{
 p{
     font-size: 1.4rem;
 }
+.spinner{
+   text-align: center;
+   animation-name: animSpinner;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+}
+@keyframes animSpinner{
+    0%{
+        color: var(--gris);
+    }
+    50%{
+        color: var(--blanco);
+    }
+    100%{
+        color: var(--gris);
+    }
+}

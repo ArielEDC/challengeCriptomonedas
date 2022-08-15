@@ -16,6 +16,7 @@ export class CardCriptoComponent implements OnInit {
 
   cripto:any;
   precio:any;
+  cargando: boolean = true;
 
   constructor(private api:ApiCriptoService) { }
 
@@ -23,6 +24,8 @@ export class CardCriptoComponent implements OnInit {
     this.api.verCripto(this.nombre.toLowerCase()).subscribe(data=>{
       this.cripto = data;
       this.precio = Number.parseFloat(data.prices.USD);
+
+      this.cargando = false;
       //console.log(this.cripto);
     });
   }
@@ -38,10 +41,8 @@ export class CardCriptoComponent implements OnInit {
   
       localStorage.setItem(this.api.localStorageKeyName, JSON.stringify(criptos));
 
-
     }
-    
-
   }
+
 
 }
