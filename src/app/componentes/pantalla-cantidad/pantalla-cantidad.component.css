@@ -37,8 +37,8 @@ h1{
     border-radius: 1rem;
     max-width: 60rem;
     
-    background-color: var(--gris);
-    color: var(--gris-claro);
+    background-color: var(--gris-claro);
+    color: var(--gris);
     font-family: var(--fuente);
     cursor: pointer;
     font-weight: 600;

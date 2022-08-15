@@ -39,12 +39,12 @@ p{
 }
 @keyframes animSpinner{
     0%{
-        color: var(--gris);
+        color: var(--fondo1);
     }
     50%{
         color: var(--blanco);
     }
     100%{
-        color: var(--gris);
+        color: var(--fondo1);
     }
 }

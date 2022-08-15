@@ -28,7 +28,8 @@ h1{
 
 .lista li{
     width: min(50rem, 100%);
-    background-color: var(--gris);
+    color: var(--gris);
+    background-color: var(--gris-claro);
     border-radius: 1rem;
 
     margin: 0.2rem 0;
